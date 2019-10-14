@@ -58,7 +58,7 @@ func requestCSP(client *http.Client, url string) ([]string, error) {
 	csp := resp.Header.Get("Content-Security-Policy")
 	results := r.FindAllString(csp, -1)
 
-	return results, err
+	return results, nil
 }
 
 func main() {
