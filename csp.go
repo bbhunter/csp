@@ -83,13 +83,14 @@ func main() {
 
 			client := &http.Client{
 				Transport: tr,
+				Timeout:   2 * time.Second,
 			}
 
 			for url := range urlsChannel {
 				res, err := requestCSP(client, url)
 				if err != nil {
 					fmt.Fprintf(os.Stderr, "could not get CSP: %v\n", err)
-					return
+					continue
 				}
 
 				// Ensure we do not print out an empty string.
