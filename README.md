@@ -30,7 +30,7 @@ $ cat hosts.txt | csp -c 2
 # Installation
 
 ```
-$ go get -u github.com/edoverflow/csp
+$ go install github.com/edoverflow/csp@latest
 ```
 
 You can also [download a binary](https://github.com/EdOverflow/csp/releases) and put it in your `$PATH` (e.g. in `/usr/bin/`).
